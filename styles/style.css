@@ -15,7 +15,7 @@
 }
 
 .hide {
-  display: none !important;
+  /* display: none !important; */
 }
 
 /* navbar  */
@@ -180,7 +180,6 @@
   gap: 60px;
   margin: 0 250px;
   justify-content: center;
-  position: relative;
 }
 
 .featre2-section .left {
@@ -211,7 +210,9 @@
 .featre2-section .left-card-container {
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: stretch;
   gap: 10px;
+  height: 100%;
 }
 
 .featre2-section .left-card-container div {
@@ -237,12 +238,17 @@
 
 .featre2-section .right {
   flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
 }
 
 .featre2-section .right img {
   width: 100%;
   /* height: 100%; */
   border-radius: 8px;
+  /* object-fit: contain; */
 }
 .floating-div {
   width: 200px;
@@ -250,8 +256,8 @@
   background-color: #ff900e;
   border-radius: 8px;
   position: absolute;
-  left: 380px;
-  top: 455px;
+  left: -36px;
+  top: 440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -415,7 +421,7 @@ Media Query Start
 
 /* feature 2 media query start  */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .featre2-section {
     flex-direction: column;
     gap: 30px;
@@ -424,21 +430,76 @@ Media Query Start
     align-items: center;
   }
 
-  .floating-div {
-    position: static;
-  }
-}
-
-@media screen and (min-width: 1270px) {
-  /* .featre2-section {
+  .featre2-section .right {
     flex-direction: column;
-    gap: 30px;
-    margin: 0 15px;
-    justify-content: center;
+    gap: 25px;
     align-items: center;
   }
 
   .floating-div {
     position: static;
-  } */
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .featre2-section .left-card-container div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #ffffff;
+  }
+
+  .featre2-section .left-card-container div h5 {
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 20px;
+    color: #131313;
+  }
+
+  .featre2-section .left-card-container div p {
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 26px;
+    color: #727272;
+  }
+
+  .featre2-section .right {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .featre2-section .right img {
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 8px;
+    /* object-fit: contain; */
+  }
+  .floating-div {
+    width: 200px;
+    height: 120px;
+    background-color: #ff900e;
+    border-radius: 8px;
+    position: absolute;
+    left: -36px;
+    top: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 0;
+  }
+  .floating-div h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .floating-div p {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+  }
 }
