@@ -103,6 +103,68 @@
   border-radius: 8px;
 }
 
+/* feature-section */
+
+.feature-section {
+  display: flex;
+  gap: 60px;
+  margin: 80px 200px 120px 200px;
+  justify-content: center;
+  align-items: center;
+}
+.left-feature {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  flex-basis: 50%;
+}
+.feature-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 0;
+}
+.right-feature {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+}
+.right-feature article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75%;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.right-feature article h3 {
+  font-size: 40px;
+  line-height: 53px;
+}
+
+.right-feature article h3 .span1 {
+  color: #727272;
+  font-weight: 500;
+}
+
+.right-feature article h3 .span2 {
+  color: #131313;
+  font-weight: 700;
+}
+.right-feature article h3 .span3 {
+  font-weight: 700;
+  color: #ff900e;
+}
+
+.right-feature article p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #727272;
+  text-align: start;
+}
 /*****************
 *******************
 Media Query Start
@@ -185,5 +247,64 @@ Media Query Start
     width: 90%;
     display: flex;
     margin-bottom: 30px;
+  }
+}
+
+/* feature media query */
+@media screen and (max-width: 630px) {
+  /* feature-section */
+
+  .feature-section {
+    flex-direction: column;
+    gap: 60px;
+    margin: 80px 10px 120px 10px;
+  }
+  .left-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature-img {
+    width: 300px;
+    height: 300px;
+  }
+  .right-feature {
+    flex-direction: column;
+    align-items: center;
+  }
+  .right-feature article {
+    width: 90%;
+    height: 75%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+  }
+}
+
+@media screen and (min-width: 631px) and (max-width: 1140px) {
+  /* feature-section */
+
+  .feature-section {
+    flex-direction: column;
+    gap: 60px;
+    margin: 80px 10px 120px 10px;
+  }
+
+  .feature-img {
+    width: 300px;
+    height: 300px;
+  }
+  .right-feature {
+    flex-direction: column;
+    align-items: center;
+  }
+  .right-feature article {
+    width: 90%;
+    height: 75%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
   }
 }
