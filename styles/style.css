@@ -522,6 +522,7 @@ Media Query Start
     flex-direction: column;
     gap: 25px;
     align-items: center;
+    position: static;
   }
 
   .floating-div {
