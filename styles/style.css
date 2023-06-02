@@ -239,8 +239,15 @@
 .featre2-section .right {
   flex-basis: 50%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.featre2-section .right div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
 }
 
@@ -249,20 +256,21 @@
   /* height: 100%; */
   border-radius: 8px;
 }
-.floating-div {
+.right div .floating-div {
   width: 200px;
   height: 120px;
   background-color: #ff900e;
   border-radius: 8px;
   position: absolute;
-  left: -36px;
-  top: 440px;
+  left: -43px;
+  bottom: -40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   border: 0;
+  gap: 8px !important;
 }
 .floating-div h3 {
   color: #ffffff;
@@ -518,12 +526,16 @@ Media Query Start
   }
 
   .featre2-section .right {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 25px;
     align-items: center;
-    position: static;
   }
 
+  .featre2-section .right div {
+    gap: 25px;
+    position: static;
+    align-items: center;
+  }
   .floating-div {
     position: static;
   }
@@ -534,7 +546,7 @@ Media Query Start
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background: #ffffff;
+    background-color: #ffffff;
   }
 
   .featre2-section .left-card-container div h5 {
@@ -551,12 +563,18 @@ Media Query Start
     color: #727272;
   }
 
-  .featre2-section .right {
+  /* .featre2-section .right {
     flex-basis: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+  } */
+  .featre2-section .right div {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;
+    justify-content: center; */
   }
 
   .featre2-section .right img {
@@ -565,14 +583,14 @@ Media Query Start
     border-radius: 8px;
     /* object-fit: contain; */
   }
-  .floating-div {
+  .right div .floating-div {
     width: 200px;
     height: 120px;
     background-color: #ff900e;
     border-radius: 8px;
     position: absolute;
-    left: -36px;
-    top: 440px;
+    left: -43px;
+    bottom: -40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
