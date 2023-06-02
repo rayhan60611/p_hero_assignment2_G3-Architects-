@@ -418,6 +418,92 @@
   filter: grayscale(100%);
 }
 
+/* members-section */
+
+.members-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 0px 250px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.members-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.members-section .members-title h3 {
+  color: #131313;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 53px;
+}
+
+.members-section .members-title p {
+  color: #727272;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.members-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.members-card-container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  place-self: center;
+  /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+  padding: 10px 10px;
+  border: 1px solid #131313;
+  border-radius: 8px;
+}
+
+.members-card-container .card img {
+  width: 90%;
+  /* padding: 10px 0; */
+  border-radius: 10px;
+}
+
+.members-card-container .card h3 {
+  color: #131313;
+  font-weight: 700;
+  font-size: 16px;
+  /* line-height: 53px; */
+}
+
+.members-card-container .card p {
+  color: #727272;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.social-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-div a i {
+  font-size: 25px;
+  color: #131313;
+}
+
 /* footer section */
 
 .footer {
@@ -816,5 +902,44 @@ Media Query Start
     font-weight: 400;
     font-size: 12px;
     line-height: 23px;
+  }
+}
+
+/* members-section media query */
+@media screen and (max-width: 576px) {
+  .members-section {
+    margin: 0px 25px;
+    margin-bottom: 100px;
+  }
+  .members-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .members-card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1130px) {
+  .members-section {
+    margin: 0px 25px;
+    margin-bottom: 100px;
+  }
+  /* .members-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  .members-card-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
